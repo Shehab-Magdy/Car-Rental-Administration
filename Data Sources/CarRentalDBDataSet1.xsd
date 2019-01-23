@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="CarRentalDBDataSet1" targetNamespace="http://tempuri.org/CarRentalDBDataSet1.xsd" xmlns:mstns="http://tempuri.org/CarRentalDBDataSet1.xsd" xmlns="http://tempuri.org/CarRentalDBDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="CarRentalDBConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="CarRentalDBConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Car_Rental.My.MySettings.GlobalReference.Default.CarRentalDBConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="v_ContractTableAdapter" GeneratorDataComponentClassName="v_ContractTableAdapter" Name="v_Contract" UserDataComponentName="v_ContractTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="CarRentalDBConnectionString (MySettings)" DbObjectName="CarRentalDB.dbo.v_Contract" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT contractcode, contractdate, custcode, carcode, carlicpno, dayprice, daykm, startdate, enddate, kmout, tankout, extrakmprice, brname, custname, nationality, address, telephone, idtype, idno, idsource, iddatevalid, drivelictype, licno, licsource, licdatevalid, cartype, carmodel, ownername, empname FROM dbo.v_Contract</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="contractcode" DataSetColumn="contractcode" />
+              <Mapping SourceColumn="contractdate" DataSetColumn="contractdate" />
+              <Mapping SourceColumn="custcode" DataSetColumn="custcode" />
+              <Mapping SourceColumn="carcode" DataSetColumn="carcode" />
+              <Mapping SourceColumn="carlicpno" DataSetColumn="carlicpno" />
+              <Mapping SourceColumn="dayprice" DataSetColumn="dayprice" />
+              <Mapping SourceColumn="daykm" DataSetColumn="daykm" />
+              <Mapping SourceColumn="startdate" DataSetColumn="startdate" />
+              <Mapping SourceColumn="enddate" DataSetColumn="enddate" />
+              <Mapping SourceColumn="kmout" DataSetColumn="kmout" />
+              <Mapping SourceColumn="tankout" DataSetColumn="tankout" />
+              <Mapping SourceColumn="extrakmprice" DataSetColumn="extrakmprice" />
+              <Mapping SourceColumn="brname" DataSetColumn="brname" />
+              <Mapping SourceColumn="custname" DataSetColumn="custname" />
+              <Mapping SourceColumn="nationality" DataSetColumn="nationality" />
+              <Mapping SourceColumn="address" DataSetColumn="address" />
+              <Mapping SourceColumn="telephone" DataSetColumn="telephone" />
+              <Mapping SourceColumn="idtype" DataSetColumn="idtype" />
+              <Mapping SourceColumn="idno" DataSetColumn="idno" />
+              <Mapping SourceColumn="idsource" DataSetColumn="idsource" />
+              <Mapping SourceColumn="iddatevalid" DataSetColumn="iddatevalid" />
+              <Mapping SourceColumn="drivelictype" DataSetColumn="drivelictype" />
+              <Mapping SourceColumn="licno" DataSetColumn="licno" />
+              <Mapping SourceColumn="licsource" DataSetColumn="licsource" />
+              <Mapping SourceColumn="licdatevalid" DataSetColumn="licdatevalid" />
+              <Mapping SourceColumn="cartype" DataSetColumn="cartype" />
+              <Mapping SourceColumn="carmodel" DataSetColumn="carmodel" />
+              <Mapping SourceColumn="ownername" DataSetColumn="ownername" />
+              <Mapping SourceColumn="empname" DataSetColumn="empname" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="CarRentalDBDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="CarRentalDBDataSet1" msprop:Generator_UserDSName="CarRentalDBDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="v_Contract" msprop:Generator_TableClassName="v_ContractDataTable" msprop:Generator_TableVarName="tablev_Contract" msprop:Generator_TablePropName="v_Contract" msprop:Generator_RowDeletingName="v_ContractRowDeleting" msprop:Generator_RowChangingName="v_ContractRowChanging" msprop:Generator_RowEvHandlerName="v_ContractRowChangeEventHandler" msprop:Generator_RowDeletedName="v_ContractRowDeleted" msprop:Generator_UserTableName="v_Contract" msprop:Generator_RowChangedName="v_ContractRowChanged" msprop:Generator_RowEvArgName="v_ContractRowChangeEvent" msprop:Generator_RowClassName="v_ContractRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="contractcode" msprop:Generator_ColumnVarNameInTable="columncontractcode" msprop:Generator_ColumnPropNameInRow="contractcode" msprop:Generator_ColumnPropNameInTable="contractcodeColumn" msprop:Generator_UserColumnName="contractcode">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="contractdate" msprop:Generator_ColumnVarNameInTable="columncontractdate" msprop:Generator_ColumnPropNameInRow="contractdate" msprop:Generator_ColumnPropNameInTable="contractdateColumn" msprop:Generator_UserColumnName="contractdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="custcode" msprop:Generator_ColumnVarNameInTable="columncustcode" msprop:Generator_ColumnPropNameInRow="custcode" msprop:Generator_ColumnPropNameInTable="custcodeColumn" msprop:Generator_UserColumnName="custcode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="carcode" msprop:Generator_ColumnVarNameInTable="columncarcode" msprop:Generator_ColumnPropNameInRow="carcode" msprop:Generator_ColumnPropNameInTable="carcodeColumn" msprop:Generator_UserColumnName="carcode" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="carlicpno" msprop:Generator_ColumnVarNameInTable="columncarlicpno" msprop:Generator_ColumnPropNameInRow="carlicpno" msprop:Generator_ColumnPropNameInTable="carlicpnoColumn" msprop:Generator_UserColumnName="carlicpno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="dayprice" msprop:Generator_ColumnVarNameInTable="columndayprice" msprop:Generator_ColumnPropNameInRow="dayprice" msprop:Generator_ColumnPropNameInTable="daypriceColumn" msprop:Generator_UserColumnName="dayprice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="daykm" msprop:Generator_ColumnVarNameInTable="columndaykm" msprop:Generator_ColumnPropNameInRow="daykm" msprop:Generator_ColumnPropNameInTable="daykmColumn" msprop:Generator_UserColumnName="daykm" type="xs:int" minOccurs="0" />
+              <xs:element name="startdate" msprop:Generator_ColumnVarNameInTable="columnstartdate" msprop:Generator_ColumnPropNameInRow="startdate" msprop:Generator_ColumnPropNameInTable="startdateColumn" msprop:Generator_UserColumnName="startdate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="enddate" msprop:Generator_ColumnVarNameInTable="columnenddate" msprop:Generator_ColumnPropNameInRow="enddate" msprop:Generator_ColumnPropNameInTable="enddateColumn" msprop:Generator_UserColumnName="enddate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="kmout" msprop:Generator_ColumnVarNameInTable="columnkmout" msprop:Generator_ColumnPropNameInRow="kmout" msprop:Generator_ColumnPropNameInTable="kmoutColumn" msprop:Generator_UserColumnName="kmout" type="xs:int" minOccurs="0" />
+              <xs:element name="tankout" msprop:Generator_ColumnVarNameInTable="columntankout" msprop:Generator_ColumnPropNameInRow="tankout" msprop:Generator_ColumnPropNameInTable="tankoutColumn" msprop:Generator_UserColumnName="tankout" type="xs:decimal" minOccurs="0" />
+              <xs:element name="extrakmprice" msprop:Generator_ColumnVarNameInTable="columnextrakmprice" msprop:Generator_ColumnPropNameInRow="extrakmprice" msprop:Generator_ColumnPropNameInTable="extrakmpriceColumn" msprop:Generator_UserColumnName="extrakmprice" type="xs:decimal" minOccurs="0" />
+              <xs:element name="brname" msprop:Generator_ColumnVarNameInTable="columnbrname" msprop:Generator_ColumnPropNameInRow="brname" msprop:Generator_ColumnPropNameInTable="brnameColumn" msprop:Generator_UserColumnName="brname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="custname" msprop:Generator_ColumnVarNameInTable="columncustname" msprop:Generator_ColumnPropNameInRow="custname" msprop:Generator_ColumnPropNameInTable="custnameColumn" msprop:Generator_UserColumnName="custname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="nationality" msprop:Generator_ColumnVarNameInTable="columnnationality" msprop:Generator_ColumnPropNameInRow="nationality" msprop:Generator_ColumnPropNameInTable="nationalityColumn" msprop:Generator_UserColumnName="nationality" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="address" msprop:Generator_ColumnVarNameInTable="columnaddress" msprop:Generator_ColumnPropNameInRow="address" msprop:Generator_ColumnPropNameInTable="addressColumn" msprop:Generator_UserColumnName="address" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="telephone" msprop:Generator_ColumnVarNameInTable="columntelephone" msprop:Generator_ColumnPropNameInRow="telephone" msprop:Generator_ColumnPropNameInTable="telephoneColumn" msprop:Generator_UserColumnName="telephone">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idtype" msprop:Generator_ColumnVarNameInTable="columnidtype" msprop:Generator_ColumnPropNameInRow="idtype" msprop:Generator_ColumnPropNameInTable="idtypeColumn" msprop:Generator_UserColumnName="idtype" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idno" msprop:Generator_ColumnVarNameInTable="columnidno" msprop:Generator_ColumnPropNameInRow="idno" msprop:Generator_ColumnPropNameInTable="idnoColumn" msprop:Generator_UserColumnName="idno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="idsource" msprop:Generator_ColumnVarNameInTable="columnidsource" msprop:Generator_ColumnPropNameInRow="idsource" msprop:Generator_ColumnPropNameInTable="idsourceColumn" msprop:Generator_UserColumnName="idsource" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="iddatevalid" msprop:Generator_ColumnVarNameInTable="columniddatevalid" msprop:Generator_ColumnPropNameInRow="iddatevalid" msprop:Generator_ColumnPropNameInTable="iddatevalidColumn" msprop:Generator_UserColumnName="iddatevalid" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="drivelictype" msprop:Generator_ColumnVarNameInTable="columndrivelictype" msprop:Generator_ColumnPropNameInRow="drivelictype" msprop:Generator_ColumnPropNameInTable="drivelictypeColumn" msprop:Generator_UserColumnName="drivelictype" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="licno" msprop:Generator_ColumnVarNameInTable="columnlicno" msprop:Generator_ColumnPropNameInRow="licno" msprop:Generator_ColumnPropNameInTable="licnoColumn" msprop:Generator_UserColumnName="licno" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="licsource" msprop:Generator_ColumnVarNameInTable="columnlicsource" msprop:Generator_ColumnPropNameInRow="licsource" msprop:Generator_ColumnPropNameInTable="licsourceColumn" msprop:Generator_UserColumnName="licsource" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="licdatevalid" msprop:Generator_ColumnVarNameInTable="columnlicdatevalid" msprop:Generator_ColumnPropNameInRow="licdatevalid" msprop:Generator_ColumnPropNameInTable="licdatevalidColumn" msprop:Generator_UserColumnName="licdatevalid" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="cartype" msprop:Generator_ColumnVarNameInTable="columncartype" msprop:Generator_ColumnPropNameInRow="cartype" msprop:Generator_ColumnPropNameInTable="cartypeColumn" msprop:Generator_UserColumnName="cartype" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="carmodel" msprop:Generator_ColumnVarNameInTable="columncarmodel" msprop:Generator_ColumnPropNameInRow="carmodel" msprop:Generator_ColumnPropNameInTable="carmodelColumn" msprop:Generator_UserColumnName="carmodel" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ownername" msprop:Generator_ColumnVarNameInTable="columnownername" msprop:Generator_ColumnPropNameInRow="ownername" msprop:Generator_ColumnPropNameInTable="ownernameColumn" msprop:Generator_UserColumnName="ownername" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="empname" msprop:Generator_ColumnVarNameInTable="columnempname" msprop:Generator_ColumnPropNameInRow="empname" msprop:Generator_ColumnPropNameInTable="empnameColumn" msprop:Generator_UserColumnName="empname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:v_Contract" />
+      <xs:field xpath="mstns:contractcode" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
