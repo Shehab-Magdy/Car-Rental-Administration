@@ -176,7 +176,7 @@ Partial Class RentCar
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.CustomFormat = "dd -MMMM- yyyy"
+        Me.DateTimePicker1.CustomFormat = "yyyy-MM-dd"
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DateTimePicker1.Location = New System.Drawing.Point(630, 20)
         Me.DateTimePicker1.Name = "DateTimePicker1"
@@ -581,7 +581,7 @@ Partial Class RentCar
         '
         'DateTimePicker2
         '
-        Me.DateTimePicker2.CustomFormat = "dd -MM- yyyy  HH:mm"
+        Me.DateTimePicker2.CustomFormat = "yyyy-MM-dd"
         Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DateTimePicker2.Location = New System.Drawing.Point(516, 34)
         Me.DateTimePicker2.Name = "DateTimePicker2"
@@ -653,7 +653,7 @@ Partial Class RentCar
         '
         'DateTimePicker3
         '
-        Me.DateTimePicker3.CustomFormat = "dd -MM- yyyy  HH:mm"
+        Me.DateTimePicker3.CustomFormat = "yyyy-MM-dd"
         Me.DateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DateTimePicker3.Location = New System.Drawing.Point(226, 34)
         Me.DateTimePicker3.Name = "DateTimePicker3"
@@ -1169,7 +1169,7 @@ Partial Class RentCar
         Me.PBox11.TabIndex = 49
         Me.PBox11.TabStop = False
         '
-        'Frm3
+        'RentCar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -1203,7 +1203,7 @@ Partial Class RentCar
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
-        Me.Name = "Frm3"
+        Me.Name = "RentCar"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.RightToLeftLayout = True
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

@@ -62,9 +62,9 @@ Partial Class FindFrm
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(1086, 58)
+        Me.Button1.Location = New System.Drawing.Point(543, 17)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(87, 25)
+        Me.Button1.Size = New System.Drawing.Size(87, 50)
         Me.Button1.TabIndex = 2
         Me.Button1.Text = "ابحث"
         Me.Button1.UseVisualStyleBackColor = True
@@ -135,6 +135,8 @@ Partial Class FindFrm
         '
         'CbBox1
         '
+        Me.CbBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.CbBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.CbBox1.FormattingEnabled = True
         Me.CbBox1.Location = New System.Drawing.Point(337, 17)
         Me.CbBox1.Name = "CbBox1"
@@ -143,6 +145,8 @@ Partial Class FindFrm
         '
         'CbBox2
         '
+        Me.CbBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.CbBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.CbBox2.FormattingEnabled = True
         Me.CbBox2.Location = New System.Drawing.Point(337, 45)
         Me.CbBox2.Name = "CbBox2"

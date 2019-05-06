@@ -5,17 +5,24 @@ Public Class CashManagement
     Sub new_payment()
         RadioButton1.Checked = True
         RadioButton3.Checked = True
+        Load_Combobox()
+        ComboBox6.Enabled = True
         TextBox1.Enabled = False
         TextBox2.Text = ""
         TextBox6.Text = ""
         TextBox8.Text = ""
+        'ComboBox6.Items.Clear()
         DateTimePicker1.Value = Today
         DateTimePicker2.Value = Today
         RadioButton1.Focus()
-
-    End Sub
-
-    Sub load_from_Btn()
+        If RadioButton1.Checked Then
+            RadioButton1.ForeColor = Color.Red
+            RadioButton2.ForeColor = Color.Gray
+        End If
+        If RadioButton2.Checked Then
+            RadioButton2.ForeColor = Color.Red
+            RadioButton1.ForeColor = Color.Gray
+        End If
 
     End Sub
 
@@ -49,6 +56,7 @@ Public Class CashManagement
                 .DataSource = dt2
                 .DisplayMember = "name"
                 .ValueMember = "code"
+                '.SelectedIndex = -1
             End With
 
             adapter3.Fill(dt3)
@@ -56,6 +64,7 @@ Public Class CashManagement
                 .DataSource = dt3
                 .DisplayMember = "name"
                 .ValueMember = "code"
+                .SelectedIndex = -1
             End With
 
             adapter5.Fill(dt5)
@@ -64,7 +73,10 @@ Public Class CashManagement
                 .DisplayMember = "name"
                 .ValueMember = "code"
                 .SelectedValue = 3
+                .SelectedIndex = -1
             End With
+            ComboBox3.SelectedIndex = -1
+            ComboBox6.SelectedIndex = -1
 
             connection.Close()
         Catch ex As Exception
@@ -91,9 +103,19 @@ Public Class CashManagement
         ElseIf cashfrmload = 1 Then
             load_from_Btn()
         End If
-        
-    End Sub
+        If RadioButton1.Checked Then
+            RadioButton1.ForeColor = Color.Red
+            RadioButton2.ForeColor = Color.Gray
+        End If
+        If RadioButton2.Checked Then
+            RadioButton2.ForeColor = Color.Red
+            RadioButton1.ForeColor = Color.Gray
+        End If
 
+    End Sub
+    Private Sub load_from_Btn()
+
+    End Sub
     Private Sub RadioButton4_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton4.CheckedChanged
         TextBox2.Enabled = True
         DateTimePicker2.Enabled = True
@@ -138,6 +160,7 @@ Public Class CashManagement
                 .DataSource = dt4
                 .DisplayMember = "name"
                 .ValueMember = "code"
+                .SelectedIndex = -1
             End With
             connection.Close()
         Catch ex As Exception
@@ -146,7 +169,6 @@ Public Class CashManagement
         End Try
 endline:
     End Sub
-
 
     Private Sub RadioButton3_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton3.CheckedChanged
         TextBox2.Enabled = False
@@ -178,9 +200,20 @@ endline:
         Dim command As New SqlCommand
         branchcode = ComboBox1.SelectedValue.ToString
         cashbenefit = ComboBox3.SelectedValue.ToString
-        checkbank = ComboBox4.SelectedValue.ToString
         cashbenefittype = ComboBox2.SelectedValue.ToString
         bankcode = ComboBox5.SelectedValue.ToString
+
+        If ComboBox6.SelectedIndex = -1 Then
+            carcode = 0
+        Else
+            carcode = ComboBox6.SelectedValue.ToString
+        End If
+
+        If ComboBox4.SelectedIndex = -1 Then
+            checkbank = 0
+        Else
+            checkbank = ComboBox4.SelectedValue.ToString
+        End If
 
         method = 0
         cashtype = 0
@@ -197,15 +230,15 @@ endline:
             cashtype = 40 'صرف نقدية select from CashOrBank
         End If
 
-        cashdate = DateTimePicker1.Value
-        checkdate = DateTimePicker2.Value
+        cashdate = Format(DateTimePicker1.Value, "yyyy-MM-dd")
+        checkdate = Format(DateTimePicker2.Value, "yyyy-MM-dd")
 
         value = Val(TextBox6.Text.Trim)
         notes = TextBox8.Text.Trim
         checkno = TextBox2.Text.Trim
 
         If TextBox1.Text = "" Then
-            query = "exec SP_Cashsave @cashtype = '" & cashtype & "',@branchcode='" & branchcode & "' ,@bankcode='" & bankcode & "',@cashbenefittype='" & cashbenefittype & "',@cashbenefit='" & cashbenefit & "',@notes='" & notes & "',@method='" & method & "',@checkno='" & checkno & "',@checkbank='" & checkbank & "',@value='" & value & "',@cashdate='" & cashdate & "',@checkdate='" & checkdate & "'"
+            query = "exec sp_CashSave @cashtype = '" & cashtype & "',@branchcode='" & branchcode & "' ,@bankcode='" & bankcode & "',@cashbenefittype='" & cashbenefittype & "',@cashbenefit='" & cashbenefit & "',@notes='" & notes & "',@method='" & method & "',@checkno='" & checkno & "',@checkbank='" & checkbank & "',@value='" & value & "',@cashdate='" & cashdate & "',@checkdate='" & checkdate & "',@carcode='" & carcode & "'"
         End If
         If TextBox1.Text <> "" Then
             query = "update cashestbl set notes = '" & notes & "' where id = '" & cashcode & "'"
@@ -234,4 +267,64 @@ endline:
         FindFrm.Show()
     End Sub
 
+
+    Private Sub ComboBox3_DropDownClosed(sender As Object, e As EventArgs) Handles ComboBox3.DropDownClosed
+        Dim query4 As String = ""
+        Dim dt4 As New DataTable
+        Dim Destination As Integer = ComboBox2.SelectedValue.ToString
+        Dim customer As Integer
+
+        If Destination = 1 Then
+            customer = ComboBox3.SelectedValue.ToString
+            query4 = "select CarCode, CarName from v_carnames where contractcode in (select code from contracttbl where custcode = " & customer & ") and contractstatus = 0"
+        ElseIf Destination = 2 Then
+            customer = ComboBox3.SelectedValue.ToString
+            query4 = "select distinct CarCode, CarName  from v_carnames where ownerid = " & customer
+        Else
+            ComboBox6.Enabled = False
+            ComboBox6.SelectedIndex = -1
+            GoTo endline
+        End If
+
+        Dim adapter4 = New SqlDataAdapter(query4, connection)
+        adapter4.Fill(dt4)
+
+        Try
+            With ComboBox6
+                .DataSource = dt4
+                .DisplayMember = "CarName"
+                .ValueMember = "CarCode"
+                .SelectedIndex = -1
+            End With
+            connection.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            connection.Close()
+        End Try
+endline:
+    End Sub
+
+    Private Sub RadioButton1_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton1.CheckedChanged
+        If RadioButton1.Checked Then
+            RadioButton1.ForeColor = Color.Red
+            RadioButton2.ForeColor = Color.Gray
+        End If
+        If RadioButton2.Checked Then
+            RadioButton2.ForeColor = Color.Red
+            RadioButton1.ForeColor = Color.Gray
+        End If
+
+    End Sub
+
+    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
+        If RadioButton2.Checked Then
+            RadioButton2.ForeColor = Color.Red
+            RadioButton1.ForeColor = Color.Gray
+        End If
+        If RadioButton1.Checked Then
+            RadioButton1.ForeColor = Color.Red
+            RadioButton2.ForeColor = Color.Gray
+        End If
+
+    End Sub
 End Class

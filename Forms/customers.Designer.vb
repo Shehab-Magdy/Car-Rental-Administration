@@ -83,8 +83,6 @@ Partial Class customers
         Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        'Me.ShapeContainer1 = New Microsoft.VisualBasic.PowerPacks.ShapeContainer()
-        'Me.LineShape1 = New Microsoft.VisualBasic.PowerPacks.LineShape()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label31 = New System.Windows.Forms.Label()
         Me.Label32 = New System.Windows.Forms.Label()
@@ -98,11 +96,28 @@ Partial Class customers
         Me.Button9 = New System.Windows.Forms.Button()
         Me.Button10 = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Button11 = New System.Windows.Forms.Button()
         Me.Button12 = New System.Windows.Forms.Button()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.TextBox17 = New System.Windows.Forms.TextBox()
+        Me.TextBox15 = New System.Windows.Forms.TextBox()
+        Me.TextBox16 = New System.Windows.Forms.TextBox()
+        Me.Label39 = New System.Windows.Forms.Label()
+        Me.Label40 = New System.Windows.Forms.Label()
+        Me.Label41 = New System.Windows.Forms.Label()
+        Me.Label42 = New System.Windows.Forms.Label()
+        Me.Label43 = New System.Windows.Forms.Label()
+        Me.Button13 = New System.Windows.Forms.Button()
+        Me.Button14 = New System.Windows.Forms.Button()
+        Me.OpenFileD1 = New System.Windows.Forms.OpenFileDialog()
+        Me.PBox2 = New System.Windows.Forms.PictureBox()
+        Me.PBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button11 = New System.Windows.Forms.Button()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
+        CType(Me.PBox2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'GroupBox1
@@ -119,7 +134,7 @@ Partial Class customers
         Me.GroupBox1.Controls.Add(Me.Label14)
         Me.GroupBox1.Controls.Add(Me.Label13)
         Me.GroupBox1.Controls.Add(Me.Label12)
-        Me.GroupBox1.Location = New System.Drawing.Point(422, 27)
+        Me.GroupBox1.Location = New System.Drawing.Point(373, 27)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(285, 125)
         Me.GroupBox1.TabIndex = 10
@@ -128,9 +143,9 @@ Partial Class customers
         '
         'DateTimePicker2
         '
-        Me.DateTimePicker2.CustomFormat = "dd -MMMM- yyyy"
+        Me.DateTimePicker2.CustomFormat = "yyyy-MM-dd"
         Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker2.Location = New System.Drawing.Point(6, 99)
+        Me.DateTimePicker2.Location = New System.Drawing.Point(11, 102)
         Me.DateTimePicker2.Name = "DateTimePicker2"
         Me.DateTimePicker2.RightToLeftLayout = True
         Me.DateTimePicker2.Size = New System.Drawing.Size(183, 22)
@@ -138,7 +153,7 @@ Partial Class customers
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(6, 18)
+        Me.Button5.Location = New System.Drawing.Point(11, 21)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(31, 23)
         Me.Button5.TabIndex = 29
@@ -151,30 +166,33 @@ Partial Class customers
         '
         Me.ComboBox5.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
         Me.ComboBox5.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.ComboBox5.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox5.FormattingEnabled = True
-        Me.ComboBox5.Location = New System.Drawing.Point(37, 18)
+        Me.ComboBox5.Location = New System.Drawing.Point(42, 21)
         Me.ComboBox5.Name = "ComboBox5"
         Me.ComboBox5.Size = New System.Drawing.Size(152, 22)
         Me.ComboBox5.TabIndex = 10
         '
         'TextBox9
         '
-        Me.TextBox9.Location = New System.Drawing.Point(6, 45)
+        Me.TextBox9.Location = New System.Drawing.Point(11, 48)
         Me.TextBox9.Name = "TextBox9"
         Me.TextBox9.Size = New System.Drawing.Size(183, 22)
         Me.TextBox9.TabIndex = 11
+        Me.TextBox9.Text = "-"
         '
         'TextBox10
         '
-        Me.TextBox10.Location = New System.Drawing.Point(6, 72)
+        Me.TextBox10.Location = New System.Drawing.Point(11, 75)
         Me.TextBox10.Name = "TextBox10"
         Me.TextBox10.Size = New System.Drawing.Size(183, 22)
         Me.TextBox10.TabIndex = 12
+        Me.TextBox10.Text = "-"
         '
         'Label15
         '
         Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(204, 99)
+        Me.Label15.Location = New System.Drawing.Point(209, 102)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(74, 14)
         Me.Label15.TabIndex = 21
@@ -184,7 +202,7 @@ Partial Class customers
         '
         Me.Label28.AutoSize = True
         Me.Label28.ForeColor = System.Drawing.Color.Red
-        Me.Label28.Location = New System.Drawing.Point(195, 105)
+        Me.Label28.Location = New System.Drawing.Point(200, 108)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(15, 14)
         Me.Label28.TabIndex = 33
@@ -194,7 +212,7 @@ Partial Class customers
         '
         Me.Label29.AutoSize = True
         Me.Label29.ForeColor = System.Drawing.Color.Red
-        Me.Label29.Location = New System.Drawing.Point(195, 48)
+        Me.Label29.Location = New System.Drawing.Point(200, 51)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(15, 14)
         Me.Label29.TabIndex = 34
@@ -204,7 +222,7 @@ Partial Class customers
         '
         Me.Label30.AutoSize = True
         Me.Label30.ForeColor = System.Drawing.Color.Red
-        Me.Label30.Location = New System.Drawing.Point(195, 22)
+        Me.Label30.Location = New System.Drawing.Point(200, 25)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(15, 14)
         Me.Label30.TabIndex = 35
@@ -213,7 +231,7 @@ Partial Class customers
         'Label14
         '
         Me.Label14.AutoSize = True
-        Me.Label14.Location = New System.Drawing.Point(204, 72)
+        Me.Label14.Location = New System.Drawing.Point(209, 75)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(75, 14)
         Me.Label14.TabIndex = 20
@@ -222,7 +240,7 @@ Partial Class customers
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Location = New System.Drawing.Point(208, 45)
+        Me.Label13.Location = New System.Drawing.Point(213, 48)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(67, 14)
         Me.Label13.TabIndex = 19
@@ -231,7 +249,7 @@ Partial Class customers
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(208, 18)
+        Me.Label12.Location = New System.Drawing.Point(213, 21)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(64, 14)
         Me.Label12.TabIndex = 18
@@ -251,7 +269,7 @@ Partial Class customers
         Me.GroupBox2.Controls.Add(Me.Label17)
         Me.GroupBox2.Controls.Add(Me.Label18)
         Me.GroupBox2.Controls.Add(Me.Label19)
-        Me.GroupBox2.Location = New System.Drawing.Point(422, 158)
+        Me.GroupBox2.Location = New System.Drawing.Point(373, 158)
         Me.GroupBox2.Name = "GroupBox2"
         Me.GroupBox2.Size = New System.Drawing.Size(285, 126)
         Me.GroupBox2.TabIndex = 14
@@ -260,9 +278,9 @@ Partial Class customers
         '
         'DateTimePicker3
         '
-        Me.DateTimePicker3.CustomFormat = "dd -MMMM- yyyy"
+        Me.DateTimePicker3.CustomFormat = "yyyy-MM-dd"
         Me.DateTimePicker3.Format = System.Windows.Forms.DateTimePickerFormat.Custom
-        Me.DateTimePicker3.Location = New System.Drawing.Point(6, 97)
+        Me.DateTimePicker3.Location = New System.Drawing.Point(8, 96)
         Me.DateTimePicker3.Name = "DateTimePicker3"
         Me.DateTimePicker3.RightToLeftLayout = True
         Me.DateTimePicker3.Size = New System.Drawing.Size(183, 22)
@@ -270,7 +288,7 @@ Partial Class customers
         '
         'Button4
         '
-        Me.Button4.Location = New System.Drawing.Point(6, 19)
+        Me.Button4.Location = New System.Drawing.Point(8, 18)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(31, 23)
         Me.Button4.TabIndex = 28
@@ -283,30 +301,33 @@ Partial Class customers
         '
         Me.ComboBox4.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
         Me.ComboBox4.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.ComboBox4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox4.FormattingEnabled = True
-        Me.ComboBox4.Location = New System.Drawing.Point(37, 19)
+        Me.ComboBox4.Location = New System.Drawing.Point(39, 18)
         Me.ComboBox4.Name = "ComboBox4"
         Me.ComboBox4.Size = New System.Drawing.Size(152, 22)
         Me.ComboBox4.TabIndex = 14
         '
         'TextBox11
         '
-        Me.TextBox11.Location = New System.Drawing.Point(6, 45)
+        Me.TextBox11.Location = New System.Drawing.Point(8, 44)
         Me.TextBox11.Name = "TextBox11"
         Me.TextBox11.Size = New System.Drawing.Size(183, 22)
         Me.TextBox11.TabIndex = 15
+        Me.TextBox11.Text = "-"
         '
         'TextBox12
         '
-        Me.TextBox12.Location = New System.Drawing.Point(6, 71)
+        Me.TextBox12.Location = New System.Drawing.Point(8, 70)
         Me.TextBox12.Name = "TextBox12"
         Me.TextBox12.Size = New System.Drawing.Size(183, 22)
         Me.TextBox12.TabIndex = 16
+        Me.TextBox12.Text = "-"
         '
         'Label16
         '
         Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(208, 97)
+        Me.Label16.Location = New System.Drawing.Point(210, 96)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(74, 14)
         Me.Label16.TabIndex = 25
@@ -316,7 +337,7 @@ Partial Class customers
         '
         Me.Label25.AutoSize = True
         Me.Label25.ForeColor = System.Drawing.Color.Red
-        Me.Label25.Location = New System.Drawing.Point(195, 103)
+        Me.Label25.Location = New System.Drawing.Point(197, 102)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(15, 14)
         Me.Label25.TabIndex = 30
@@ -326,7 +347,7 @@ Partial Class customers
         '
         Me.Label26.AutoSize = True
         Me.Label26.ForeColor = System.Drawing.Color.Red
-        Me.Label26.Location = New System.Drawing.Point(195, 48)
+        Me.Label26.Location = New System.Drawing.Point(197, 47)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(15, 14)
         Me.Label26.TabIndex = 31
@@ -336,7 +357,7 @@ Partial Class customers
         '
         Me.Label27.AutoSize = True
         Me.Label27.ForeColor = System.Drawing.Color.Red
-        Me.Label27.Location = New System.Drawing.Point(195, 23)
+        Me.Label27.Location = New System.Drawing.Point(197, 22)
         Me.Label27.Name = "Label27"
         Me.Label27.Size = New System.Drawing.Size(15, 14)
         Me.Label27.TabIndex = 32
@@ -345,7 +366,7 @@ Partial Class customers
         'Label17
         '
         Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(204, 71)
+        Me.Label17.Location = New System.Drawing.Point(206, 70)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(75, 14)
         Me.Label17.TabIndex = 24
@@ -354,7 +375,7 @@ Partial Class customers
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(208, 45)
+        Me.Label18.Location = New System.Drawing.Point(210, 44)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(76, 14)
         Me.Label18.TabIndex = 23
@@ -363,7 +384,7 @@ Partial Class customers
         'Label19
         '
         Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(208, 18)
+        Me.Label19.Location = New System.Drawing.Point(210, 17)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(73, 14)
         Me.Label19.TabIndex = 22
@@ -379,7 +400,7 @@ Partial Class customers
         Me.GroupBox3.Controls.Add(Me.Label21)
         Me.GroupBox3.Controls.Add(Me.Label24)
         Me.GroupBox3.Controls.Add(Me.Label22)
-        Me.GroupBox3.Location = New System.Drawing.Point(422, 290)
+        Me.GroupBox3.Location = New System.Drawing.Point(373, 290)
         Me.GroupBox3.Name = "GroupBox3"
         Me.GroupBox3.Size = New System.Drawing.Size(285, 103)
         Me.GroupBox3.TabIndex = 18
@@ -401,6 +422,7 @@ Partial Class customers
         '
         Me.ComboBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
         Me.ComboBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.ComboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox3.FormattingEnabled = True
         Me.ComboBox3.Location = New System.Drawing.Point(37, 24)
         Me.ComboBox3.Name = "ComboBox3"
@@ -413,6 +435,7 @@ Partial Class customers
         Me.TextBox13.Name = "TextBox13"
         Me.TextBox13.Size = New System.Drawing.Size(183, 22)
         Me.TextBox13.TabIndex = 19
+        Me.TextBox13.Text = "-"
         '
         'TextBox14
         '
@@ -420,6 +443,7 @@ Partial Class customers
         Me.TextBox14.Name = "TextBox14"
         Me.TextBox14.Size = New System.Drawing.Size(183, 22)
         Me.TextBox14.TabIndex = 20
+        Me.TextBox14.Text = "-"
         '
         'Label20
         '
@@ -551,7 +575,7 @@ Partial Class customers
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(32, 397)
+        Me.Label11.Location = New System.Drawing.Point(32, 399)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(57, 14)
         Me.Label11.TabIndex = 13
@@ -572,6 +596,7 @@ Partial Class customers
         Me.TextBox2.Name = "TextBox2"
         Me.TextBox2.Size = New System.Drawing.Size(237, 22)
         Me.TextBox2.TabIndex = 0
+        Me.TextBox2.Text = "-"
         '
         'TextBox3
         '
@@ -579,6 +604,7 @@ Partial Class customers
         Me.TextBox3.Name = "TextBox3"
         Me.TextBox3.Size = New System.Drawing.Size(237, 22)
         Me.TextBox3.TabIndex = 1
+        Me.TextBox3.Text = "-"
         '
         'TextBox4
         '
@@ -586,6 +612,7 @@ Partial Class customers
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.Size = New System.Drawing.Size(237, 22)
         Me.TextBox4.TabIndex = 2
+        Me.TextBox4.Text = "-"
         '
         'TextBox5
         '
@@ -593,6 +620,7 @@ Partial Class customers
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(237, 22)
         Me.TextBox5.TabIndex = 4
+        Me.TextBox5.Text = "-"
         '
         'TextBox6
         '
@@ -600,6 +628,7 @@ Partial Class customers
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(237, 22)
         Me.TextBox6.TabIndex = 5
+        Me.TextBox6.Text = "-"
         '
         'TextBox7
         '
@@ -607,20 +636,23 @@ Partial Class customers
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(237, 22)
         Me.TextBox7.TabIndex = 6
+        Me.TextBox7.Text = "-"
         '
         'TextBox8
         '
-        Me.TextBox8.Location = New System.Drawing.Point(107, 397)
+        Me.TextBox8.Location = New System.Drawing.Point(107, 399)
         Me.TextBox8.Multiline = True
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.ScrollBars = System.Windows.Forms.ScrollBars.Vertical
         Me.TextBox8.Size = New System.Drawing.Size(237, 80)
         Me.TextBox8.TabIndex = 9
+        Me.TextBox8.Text = "-"
         '
         'ComboBox1
         '
         Me.ComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
         Me.ComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Location = New System.Drawing.Point(107, 175)
         Me.ComboBox1.Name = "ComboBox1"
@@ -631,6 +663,7 @@ Partial Class customers
         '
         Me.ComboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append
         Me.ComboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox2.FormattingEnabled = True
         Me.ComboBox2.Location = New System.Drawing.Point(107, 360)
         Me.ComboBox2.Name = "ComboBox2"
@@ -639,7 +672,7 @@ Partial Class customers
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.CustomFormat = "dd -MMMM- yyyy"
+        Me.DateTimePicker1.CustomFormat = "yyyy-MM-dd"
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DateTimePicker1.Location = New System.Drawing.Point(107, 323)
         Me.DateTimePicker1.Name = "DateTimePicker1"
@@ -668,24 +701,6 @@ Partial Class customers
         Me.Button2.Text = "..."
         Me.ToolTip1.SetToolTip(Me.Button2, "اضافة نوع عميل جديد")
         Me.Button2.UseVisualStyleBackColor = True
-        '
-        'ShapeContainer1
-        '
-        'Me.ShapeContainer1.Location = New System.Drawing.Point(0, 0)
-        'Me.ShapeContainer1.Margin = New System.Windows.Forms.Padding(0)
-        'Me.ShapeContainer1.Name = "ShapeContainer1"
-        'Me.ShapeContainer1.Shapes.AddRange(New Microsoft.VisualBasic.PowerPacks.Shape() {Me.LineShape1})
-        'Me.ShapeContainer1.Size = New System.Drawing.Size(747, 491)
-        'Me.ShapeContainer1.TabIndex = 27
-        'Me.ShapeContainer1.TabStop = False
-        ''
-        ''LineShape1
-        ''
-        'Me.LineShape1.Name = "LineShape1"
-        'Me.LineShape1.X1 = 370
-        'Me.LineShape1.X2 = 370
-        'Me.LineShape1.Y1 = 27
-        'Me.LineShape1.Y2 = 477
         '
         'Label23
         '
@@ -759,46 +774,46 @@ Partial Class customers
         '
         'Button6
         '
-        Me.Button6.Location = New System.Drawing.Point(407, 397)
+        Me.Button6.Location = New System.Drawing.Point(720, 412)
         Me.Button6.Name = "Button6"
         Me.Button6.Size = New System.Drawing.Size(96, 41)
-        Me.Button6.TabIndex = 21
+        Me.Button6.TabIndex = 26
         Me.Button6.Text = "حفظ"
         Me.Button6.UseVisualStyleBackColor = True
         '
         'Button7
         '
-        Me.Button7.Location = New System.Drawing.Point(527, 397)
+        Me.Button7.Location = New System.Drawing.Point(840, 412)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(96, 41)
-        Me.Button7.TabIndex = 22
+        Me.Button7.TabIndex = 27
         Me.Button7.Text = "جديد"
         Me.Button7.UseVisualStyleBackColor = True
         '
         'Button8
         '
-        Me.Button8.Location = New System.Drawing.Point(647, 397)
+        Me.Button8.Location = New System.Drawing.Point(960, 412)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(96, 41)
-        Me.Button8.TabIndex = 23
+        Me.Button8.TabIndex = 28
         Me.Button8.Text = "بحث"
         Me.Button8.UseVisualStyleBackColor = True
         '
         'Button9
         '
-        Me.Button9.Location = New System.Drawing.Point(527, 443)
+        Me.Button9.Location = New System.Drawing.Point(840, 458)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(96, 41)
-        Me.Button9.TabIndex = 24
+        Me.Button9.TabIndex = 30
         Me.Button9.Text = "التعاقد"
         Me.Button9.UseVisualStyleBackColor = True
         '
         'Button10
         '
-        Me.Button10.Location = New System.Drawing.Point(647, 443)
+        Me.Button10.Location = New System.Drawing.Point(960, 458)
         Me.Button10.Name = "Button10"
         Me.Button10.Size = New System.Drawing.Size(96, 41)
-        Me.Button10.TabIndex = 25
+        Me.Button10.TabIndex = 31
         Me.Button10.Text = "الرئيسية"
         Me.Button10.UseVisualStyleBackColor = True
         '
@@ -807,6 +822,151 @@ Partial Class customers
         Me.ToolTip1.IsBalloon = True
         Me.ToolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
         Me.ToolTip1.ToolTipTitle = "اضافة"
+        '
+        'Button12
+        '
+        Me.Button12.Location = New System.Drawing.Point(720, 458)
+        Me.Button12.Name = "Button12"
+        Me.Button12.Size = New System.Drawing.Size(96, 41)
+        Me.Button12.TabIndex = 29
+        Me.Button12.Text = "طباعة كارت العميل"
+        Me.Button12.UseVisualStyleBackColor = True
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.TextBox17)
+        Me.GroupBox4.Controls.Add(Me.TextBox15)
+        Me.GroupBox4.Controls.Add(Me.TextBox16)
+        Me.GroupBox4.Controls.Add(Me.Label39)
+        Me.GroupBox4.Controls.Add(Me.Label40)
+        Me.GroupBox4.Controls.Add(Me.Label41)
+        Me.GroupBox4.Controls.Add(Me.Label42)
+        Me.GroupBox4.Controls.Add(Me.Label43)
+        Me.GroupBox4.Location = New System.Drawing.Point(373, 399)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(285, 105)
+        Me.GroupBox4.TabIndex = 21
+        Me.GroupBox4.TabStop = False
+        Me.GroupBox4.Text = "اقرب شخص"
+        '
+        'TextBox17
+        '
+        Me.TextBox17.Location = New System.Drawing.Point(6, 15)
+        Me.TextBox17.Name = "TextBox17"
+        Me.TextBox17.Size = New System.Drawing.Size(183, 22)
+        Me.TextBox17.TabIndex = 21
+        Me.TextBox17.Text = "-"
+        '
+        'TextBox15
+        '
+        Me.TextBox15.Location = New System.Drawing.Point(6, 45)
+        Me.TextBox15.Name = "TextBox15"
+        Me.TextBox15.Size = New System.Drawing.Size(183, 22)
+        Me.TextBox15.TabIndex = 22
+        Me.TextBox15.Text = "-"
+        '
+        'TextBox16
+        '
+        Me.TextBox16.Location = New System.Drawing.Point(6, 72)
+        Me.TextBox16.Name = "TextBox16"
+        Me.TextBox16.Size = New System.Drawing.Size(183, 22)
+        Me.TextBox16.TabIndex = 23
+        Me.TextBox16.Text = "-"
+        '
+        'Label39
+        '
+        Me.Label39.AutoSize = True
+        Me.Label39.ForeColor = System.Drawing.Color.Red
+        Me.Label39.Location = New System.Drawing.Point(195, 48)
+        Me.Label39.Name = "Label39"
+        Me.Label39.Size = New System.Drawing.Size(15, 14)
+        Me.Label39.TabIndex = 34
+        Me.Label39.Text = "*"
+        '
+        'Label40
+        '
+        Me.Label40.AutoSize = True
+        Me.Label40.ForeColor = System.Drawing.Color.Red
+        Me.Label40.Location = New System.Drawing.Point(195, 22)
+        Me.Label40.Name = "Label40"
+        Me.Label40.Size = New System.Drawing.Size(15, 14)
+        Me.Label40.TabIndex = 35
+        Me.Label40.Text = "*"
+        '
+        'Label41
+        '
+        Me.Label41.AutoSize = True
+        Me.Label41.Location = New System.Drawing.Point(204, 72)
+        Me.Label41.Name = "Label41"
+        Me.Label41.Size = New System.Drawing.Size(47, 14)
+        Me.Label41.TabIndex = 20
+        Me.Label41.Text = "العنوان"
+        '
+        'Label42
+        '
+        Me.Label42.AutoSize = True
+        Me.Label42.Location = New System.Drawing.Point(208, 45)
+        Me.Label42.Name = "Label42"
+        Me.Label42.Size = New System.Drawing.Size(53, 14)
+        Me.Label42.TabIndex = 19
+        Me.Label42.Text = "التليفون"
+        '
+        'Label43
+        '
+        Me.Label43.AutoSize = True
+        Me.Label43.Location = New System.Drawing.Point(208, 18)
+        Me.Label43.Name = "Label43"
+        Me.Label43.Size = New System.Drawing.Size(41, 14)
+        Me.Label43.TabIndex = 18
+        Me.Label43.Text = "الاسم"
+        '
+        'Button13
+        '
+        Me.Button13.Location = New System.Drawing.Point(664, 48)
+        Me.Button13.Name = "Button13"
+        Me.Button13.Size = New System.Drawing.Size(80, 76)
+        Me.Button13.TabIndex = 24
+        Me.Button13.Text = "تحميل صورة البطاقة"
+        Me.Button13.UseVisualStyleBackColor = True
+        '
+        'Button14
+        '
+        Me.Button14.Location = New System.Drawing.Point(664, 180)
+        Me.Button14.Name = "Button14"
+        Me.Button14.Size = New System.Drawing.Size(80, 76)
+        Me.Button14.TabIndex = 25
+        Me.Button14.Text = "تحميل صورة الرخصة"
+        Me.Button14.UseVisualStyleBackColor = True
+        '
+        'OpenFileD1
+        '
+        Me.OpenFileD1.FileName = "OpenFileDialog1"
+        '
+        'PBox2
+        '
+        Me.PBox2.BackgroundImage = Global.Car_Rental.My.Resources.Resources.DriveLicImage
+        Me.PBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PBox2.Image = Global.Car_Rental.My.Resources.Resources.DriveLic1
+        Me.PBox2.ImageLocation = ""
+        Me.PBox2.Location = New System.Drawing.Point(750, 162)
+        Me.PBox2.Name = "PBox2"
+        Me.PBox2.Size = New System.Drawing.Size(306, 122)
+        Me.PBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PBox2.TabIndex = 46
+        Me.PBox2.TabStop = False
+        '
+        'PBox1
+        '
+        Me.PBox1.BackgroundImage = Global.Car_Rental.My.Resources.Resources.IDCard
+        Me.PBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.PBox1.Image = Global.Car_Rental.My.Resources.Resources.IDCard1
+        Me.PBox1.ImageLocation = ""
+        Me.PBox1.Location = New System.Drawing.Point(750, 30)
+        Me.PBox1.Name = "PBox1"
+        Me.PBox1.Size = New System.Drawing.Size(306, 122)
+        Me.PBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PBox1.TabIndex = 44
+        Me.PBox1.TabStop = False
         '
         'Button11
         '
@@ -820,20 +980,16 @@ Partial Class customers
         Me.ToolTip1.SetToolTip(Me.Button11, "اعادة تحديث القوائم")
         Me.Button11.UseVisualStyleBackColor = True
         '
-        'Button12
-        '
-        Me.Button12.Location = New System.Drawing.Point(407, 443)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(96, 41)
-        Me.Button12.TabIndex = 43
-        Me.Button12.Text = "طباعة كارت العميل"
-        Me.Button12.UseVisualStyleBackColor = True
-        '
-        'Frm1
+        'customers
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(747, 491)
+        Me.ClientSize = New System.Drawing.Size(1068, 508)
+        Me.Controls.Add(Me.Button14)
+        Me.Controls.Add(Me.PBox2)
+        Me.Controls.Add(Me.Button13)
+        Me.Controls.Add(Me.PBox1)
+        Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.Button12)
         Me.Controls.Add(Me.Button11)
         Me.Controls.Add(Me.Button10)
@@ -875,13 +1031,12 @@ Partial Class customers
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
         Me.Controls.Add(Me.GroupBox1)
-        'Me.Controls.Add(Me.ShapeContainer1)
         Me.Font = New System.Drawing.Font("Tahoma", 9.0!, System.Drawing.FontStyle.Bold)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.KeyPreview = True
         Me.MaximizeBox = False
-        Me.Name = "Frm1"
+        Me.Name = "customers"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.RightToLeftLayout = True
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -892,6 +1047,10 @@ Partial Class customers
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox3.PerformLayout()
+        Me.GroupBox4.ResumeLayout(False)
+        Me.GroupBox4.PerformLayout()
+        CType(Me.PBox2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -972,5 +1131,18 @@ Partial Class customers
     Friend WithEvents ToolTip1 As System.Windows.Forms.ToolTip
     Friend WithEvents Button11 As System.Windows.Forms.Button
     Friend WithEvents Button12 As System.Windows.Forms.Button
-
+    Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents TextBox17 As TextBox
+    Friend WithEvents TextBox15 As TextBox
+    Friend WithEvents TextBox16 As TextBox
+    Friend WithEvents Label39 As Label
+    Friend WithEvents Label40 As Label
+    Friend WithEvents Label41 As Label
+    Friend WithEvents Label42 As Label
+    Friend WithEvents Label43 As Label
+    Friend WithEvents PBox1 As PictureBox
+    Friend WithEvents Button13 As Button
+    Friend WithEvents Button14 As Button
+    Friend WithEvents PBox2 As PictureBox
+    Friend WithEvents OpenFileD1 As OpenFileDialog
 End Class

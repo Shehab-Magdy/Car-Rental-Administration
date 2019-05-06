@@ -12,9 +12,29 @@
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\MyPrograms\Car rental\Publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Car Rental Back Office</ProductName>
+    <PublisherName>Shehab Magdy</PublisherName>
+    <SuiteName>Car Rental Application</SuiteName>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
+    <PlatformTarget>x86</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <DefineDebug>true</DefineDebug>
@@ -49,18 +69,50 @@
   <PropertyGroup>
     <ApplicationIcon>Resources\CAR.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>A3D1F32A5938A3BBAE7246112606BAE65382CD3B</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Car Rental_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
-    <Reference Include="Microsoft.Office.Interop.Word, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
-      <EmbedInteropTypes>True</EmbedInteropTypes>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
-    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportViewer.Common.VS2010.10.0.40219.1\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.ProcessingObjectModel.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Report.Viewer.11.0.0.0\lib\net\Microsoft.ReportViewer.WebForms.DLL</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportViewer.WinForms.VS2010.10.0.40219.1\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\VisualBasic.PowerPacks.Vs.1.0.0\lib\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Deployment" />
@@ -74,6 +126,11 @@
     <Reference Include="System.Data.DataSetExtensions" />
   </ItemGroup>
   <ItemGroup>
+    <Import Include="CrystalDecisions.CrystalReports.Engine" />
+    <Import Include="CrystalDecisions.Shared" />
+    <Import Include="CrystalDecisions.Windows.Forms" />
+    <Import Include="FlashControlV71" />
+    <Import Include="log4net" />
     <Import Include="Microsoft.VisualBasic" />
     <Import Include="System" />
     <Import Include="System.Collections" />
@@ -105,6 +162,13 @@
     </Compile>
     <Compile Include="Data Sources\DataSet1.vb">
       <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DefaultImages.vb" />
+    <Compile Include="Forms\AlarmsFrm.Designer.vb">
+      <DependentUpon>AlarmsFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AlarmsFrm.vb">
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\CarCompareFrm.Designer.vb">
       <DependentUpon>CarCompareFrm.vb</DependentUpon>
@@ -140,17 +204,23 @@
     <Compile Include="Forms\Cars.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\PeriodicMaintenance.Designer.vb">
+      <DependentUpon>PeriodicMaintenance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PeriodicMaintenance.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\RentCar.Designer.vb">
       <DependentUpon>RentCar.vb</DependentUpon>
     </Compile>
     <Compile Include="Forms\RentCar.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\customers.vb">
+    <Compile Include="Forms\Customers.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\customers.Designer.vb">
-      <DependentUpon>customers.vb</DependentUpon>
+    <Compile Include="Forms\Customers.Designer.vb">
+      <DependentUpon>Customers.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\Settings.Designer.vb">
@@ -190,6 +260,7 @@
     <Compile Include="Forms\Employees.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Functions.vb" />
     <Compile Include="GM.vb" />
     <Compile Include="Forms\LogInFrm.Designer.vb">
       <DependentUpon>LogInFrm.vb</DependentUpon>
@@ -212,14 +283,94 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Reports\ReportsCrystal.Designer.vb">
-      <DependentUpon>ReportsCrystal.vb</DependentUpon>
+    <Compile Include="Reports\AvailableCarsReport.Designer.vb">
+      <DependentUpon>AvailableCarsReport.vb</DependentUpon>
     </Compile>
-    <Compile Include="Reports\ReportsCrystal.vb">
+    <Compile Include="Reports\AvailableCarsReport.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\CarsReport.Designer.vb">
+      <DependentUpon>CarsReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CarsReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\CarStatementReport.Designer.vb">
+      <DependentUpon>CarStatementReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CarStatementReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\CashFlowReport.Designer.vb">
+      <DependentUpon>CashFlowReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CashFlowReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\CustomerCard.Designer.vb">
+      <DependentUpon>CustomerCard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CustomerCard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\CustomersReport.Designer.vb">
+      <DependentUpon>CustomersReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CustomersReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\CustomerStatementReport.Designer.vb">
+      <DependentUpon>CustomerStatementReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CustomerStatementReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\EmployeeReport.Designer.vb">
+      <DependentUpon>EmployeeReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\EmployeeReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\ExpenseReport.Designer.vb">
+      <DependentUpon>ExpenseReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ExpenseReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\MaintenanceReport.Designer.vb">
+      <DependentUpon>MaintenanceReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MaintenanceReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\OpenContractsReport.Designer.vb">
+      <DependentUpon>OpenContractsReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\OpenContractsReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\OwnersReport.Designer.vb">
+      <DependentUpon>OwnersReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\OwnersReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\SafeStatementReport.Designer.vb">
+      <DependentUpon>SafeStatementReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\SafeStatementReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resource1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Forms\AlarmsFrm.resx">
+      <DependentUpon>AlarmsFrm.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\CarCompareFrm.resx">
       <DependentUpon>CarCompareFrm.vb</DependentUpon>
     </EmbeddedResource>
@@ -232,11 +383,14 @@
     <EmbeddedResource Include="Forms\Cars.resx">
       <DependentUpon>Cars.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PeriodicMaintenance.resx">
+      <DependentUpon>PeriodicMaintenance.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\RentCar.resx">
       <DependentUpon>RentCar.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\customers.resx">
-      <DependentUpon>customers.vb</DependentUpon>
+    <EmbeddedResource Include="Forms\Customers.resx">
+      <DependentUpon>Customers.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Settings.resx">
       <DependentUpon>Settings.vb</DependentUpon>
@@ -265,11 +419,44 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\ReportsCrystal.resx">
-      <DependentUpon>ReportsCrystal.vb</DependentUpon>
+    <EmbeddedResource Include="Reports\AvailableCarsReport.resx">
+      <DependentUpon>AvailableCarsReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CarsReport.resx">
+      <DependentUpon>CarsReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CashFlowReport.resx">
+      <DependentUpon>CashFlowReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CustomerCard.resx">
+      <DependentUpon>CustomerCard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CustomersReport.resx">
+      <DependentUpon>CustomersReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CustomerStatementReport.resx">
+      <DependentUpon>CustomerStatementReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\EmployeeReport.resx">
+      <DependentUpon>EmployeeReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ExpenseReport.resx">
+      <DependentUpon>ExpenseReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\OpenContractsReport.resx">
+      <DependentUpon>OpenContractsReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\OwnersReport.resx">
+      <DependentUpon>OwnersReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource1.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.vb</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Car Rental_TemporaryKey.pfx" />
     <None Include="Data Sources\CarRentalDBDataSet.xsc">
       <DependentUpon>CarRentalDBDataSet.xsd</DependentUpon>
     </None>
@@ -313,6 +500,7 @@
     <None Include="Data Sources\DataSet1.xss">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
+    <None Include="My Project\app.manifest" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -327,7 +515,17 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\true.jpg" />
+    <None Include="Resources\rating-false.png" />
+    <None Include="Resources\download.png" />
+    <None Include="Resources\Accepted.jpg" />
     <Content Include="Resources\CAR.ico" />
+    <None Include="Resources\IDCard1.jpg" />
+    <None Include="Resources\DriveLic1.jpg" />
+    <None Include="Resources\CarImage.jpg" />
+    <None Include="Resources\IDCard.jpg" />
+    <None Include="Resources\DriveLicImage.jpg" />
+    <None Include="packages.config" />
     <None Include="Resources\home.png" />
     <None Include="Resources\FindPic.bmp" />
     <None Include="Resources\04.jpg" />
@@ -338,7 +536,210 @@
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.SqlServer.SQLSysClrTypes.12.0.x86">
+      <Visible>False</Visible>
+      <ProductName>Microsoft® System CLR Types for SQL Server® 2014 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Visual.C++.14.0.arm">
+      <Visible>False</Visible>
+      <ProductName>Visual C++ "14" Runtime Libraries %28ARM%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Visual.C++.14.0.x86">
+      <Visible>False</Visible>
+      <ProductName>Visual C++ "14" Runtime Libraries %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="SAP.CrystalReports14.NET.2.0">
+      <Visible>False</Visible>
+      <ProductName>SAP Crystal Reports Runtime Engine for .NET Framework</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="CrystalDecisions.CrystalReports.Engine">
+      <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ClientDoc">
+      <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommLayer">
+      <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommonControls">
+      <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CommonObjectModel">
+      <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.Controllers">
+      <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.CubeDefModel">
+      <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.DataDefModel">
+      <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.DataSetConversion">
+      <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ObjectFactory">
+      <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.Prompting">
+      <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.ReportDefModel">
+      <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportAppServer.XmlSerialize">
+      <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.ReportSource">
+      <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Shared">
+      <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="CrystalDecisions.Windows.Forms">
+      <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="log4net">
+      <Visible>False</Visible>
+      <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

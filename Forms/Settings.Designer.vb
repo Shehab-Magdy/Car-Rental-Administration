@@ -89,7 +89,7 @@ Partial Class Settings
         Me.BtnDel.Name = "BtnDel"
         Me.BtnDel.Size = New System.Drawing.Size(81, 33)
         Me.BtnDel.TabIndex = 25
-        Me.BtnDel.Text = "حذف"
+        Me.BtnDel.Text = "ايقاف"
         Me.BtnDel.UseVisualStyleBackColor = True
         '
         'Button2
@@ -131,10 +131,10 @@ Partial Class Settings
         Me.BtnUndo.Name = "BtnUndo"
         Me.BtnUndo.Size = New System.Drawing.Size(81, 33)
         Me.BtnUndo.TabIndex = 28
-        Me.BtnUndo.Text = "استعادة"
+        Me.BtnUndo.Text = "تشغيل"
         Me.BtnUndo.UseVisualStyleBackColor = True
         '
-        'Frm4
+        'Settings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -153,7 +153,7 @@ Partial Class Settings
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.KeyPreview = True
         Me.MaximizeBox = False
-        Me.Name = "Frm4"
+        Me.Name = "Settings"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.RightToLeftLayout = True
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

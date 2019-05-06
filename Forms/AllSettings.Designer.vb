@@ -26,6 +26,7 @@ Partial Class AllSettings
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(AllSettings))
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.Label25 = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label22 = New System.Windows.Forms.Label()
@@ -67,16 +68,19 @@ Partial Class AllSettings
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Button10 = New System.Windows.Forms.Button()
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.Label25 = New System.Windows.Forms.Label()
+        Me.TabPage3 = New System.Windows.Forms.TabPage()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
+        Me.TabPage3.SuspendLayout()
         Me.SuspendLayout()
         '
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
         Me.TabControl1.Controls.Add(Me.TabPage2)
+        Me.TabControl1.Controls.Add(Me.TabPage3)
         Me.TabControl1.ItemSize = New System.Drawing.Size(80, 20)
         Me.TabControl1.Location = New System.Drawing.Point(12, 12)
         Me.TabControl1.Name = "TabControl1"
@@ -112,6 +116,19 @@ Partial Class AllSettings
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "عامة"
         Me.TabPage1.UseVisualStyleBackColor = True
+        '
+        'Label25
+        '
+        Me.Label25.BackColor = System.Drawing.Color.Transparent
+        Me.Label25.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Label25.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.0!, System.Drawing.FontStyle.Underline)
+        Me.Label25.ForeColor = System.Drawing.SystemColors.HotTrack
+        Me.Label25.Location = New System.Drawing.Point(363, 96)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(100, 20)
+        Me.Label25.TabIndex = 16
+        Me.Label25.Text = "الايرادات المتنوعة"
+        Me.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label24
         '
@@ -563,20 +580,28 @@ Partial Class AllSettings
         Me.ToolTip1.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info
         Me.ToolTip1.ToolTipTitle = "اضافة"
         '
-        'Label25
+        'TabPage3
         '
-        Me.Label25.BackColor = System.Drawing.Color.Transparent
-        Me.Label25.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Label25.Font = New System.Drawing.Font("Arial Rounded MT Bold", 13.0!, System.Drawing.FontStyle.Underline)
-        Me.Label25.ForeColor = System.Drawing.SystemColors.HotTrack
-        Me.Label25.Location = New System.Drawing.Point(363, 96)
-        Me.Label25.Name = "Label25"
-        Me.Label25.Size = New System.Drawing.Size(100, 20)
-        Me.Label25.TabIndex = 16
-        Me.Label25.Text = "الايرادات المتنوعة"
-        Me.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.TabPage3.Controls.Add(Me.Button1)
+        Me.TabPage3.Location = New System.Drawing.Point(4, 24)
+        Me.TabPage3.Name = "TabPage3"
+        Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage3.Size = New System.Drawing.Size(692, 253)
+        Me.TabPage3.TabIndex = 2
+        Me.TabPage3.Text = "Maintenance"
+        Me.TabPage3.UseVisualStyleBackColor = True
         '
-        'Frm5
+        'Button1
+        '
+        Me.Button1.ForeColor = System.Drawing.SystemColors.Highlight
+        Me.Button1.Location = New System.Drawing.Point(588, 20)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(75, 42)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "Backup Database"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'AllSettings
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -588,7 +613,7 @@ Partial Class AllSettings
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.KeyPreview = True
         Me.MaximizeBox = False
-        Me.Name = "Frm5"
+        Me.Name = "AllSettings"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.RightToLeftLayout = True
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -597,6 +622,7 @@ Partial Class AllSettings
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.TabPage2.PerformLayout()
+        Me.TabPage3.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -644,4 +670,6 @@ Partial Class AllSettings
     Friend WithEvents Button7 As System.Windows.Forms.Button
     Friend WithEvents Label24 As System.Windows.Forms.Label
     Friend WithEvents Label25 As System.Windows.Forms.Label
+    Friend WithEvents TabPage3 As TabPage
+    Friend WithEvents Button1 As Button
 End Class

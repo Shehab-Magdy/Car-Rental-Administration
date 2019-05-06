@@ -79,9 +79,9 @@ Public Class RentCar
     End Sub
 
     Sub Calcperiod()
-        date1 = DateTimePicker2.Value
-        date2 = DateTimePicker3.Value
-        periodOfRent = date2.Subtract(date1).Days + 1
+        date1 = Format(DateTimePicker2.Value, "yyyy-MM-dd")
+        date2 = Format(DateTimePicker3.Value, "yyyy-MM-dd")
+        periodOfRent = date2.Subtract(date1).Days ''+ 1
 
     End Sub
 
@@ -96,6 +96,7 @@ Public Class RentCar
                 .DataSource = dt1
                 .DisplayMember = "name"
                 .ValueMember = "code"
+                .SelectedIndex = -1
             End With
 
             connection.Close()
@@ -116,12 +117,13 @@ Public Class RentCar
             .DataSource = dt2
             .ValueMember = "code"
             .DisplayMember = "name"
+            .SelectedIndex = -1
         End With
 
     End Sub
 
     Sub Load_combo3()
-        Dim query3 As String = "select code,name from CarTypeTbl where code in (select distinct(ctype) from carstbl) and bcode = '30' order by name"
+        Dim query3 As String = "select code,name from CarTypeTbl where code in (select distinct(ctype) from carstbl) and bcode = '30' and del = '0'order by name"
         command = New SqlCommand(query3, connection)
 
         Try
@@ -134,6 +136,7 @@ Public Class RentCar
                 .DataSource = dt3
                 .DisplayMember = "name"
                 .ValueMember = "code"
+                .SelectedIndex = -1
             End With
             connection.Close()
         Catch ex As Exception
@@ -184,11 +187,9 @@ Public Class RentCar
         Load_Combobox()
         ComboBox1.Focus()
         Dim vartoday As Date
-        date2 = DateTimePicker3.Value
+        date2 = Format(DateTimePicker3.Value, "yyyy-MM-dd")
         vartoday = date2.AddDays(1)
         DateTimePicker3.Value = vartoday
-
-
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -263,7 +264,6 @@ Public Class RentCar
         End If
 
         DateTimePicker2.Focus()
-
     End Sub
 
     Private Sub Button10_Click(sender As Object, e As EventArgs) Handles Button10.Click
@@ -273,7 +273,6 @@ Public Class RentCar
 
     Private Sub DateTimePicker3_Leave(sender As Object, e As EventArgs) Handles DateTimePicker3.Leave
         Calcperiod()
-
         If DateTimePicker3.Value < DateTimePicker2.Value Then
             MsgBox("تاريخ انهاء العقد يجب ألا يكون اقل من تاريخ بدءالعقد")
             DateTimePicker3.Focus()
@@ -323,7 +322,7 @@ Public Class RentCar
             driver = Nothing
         End If
 
-        date1 = DateTimePicker1.Value
+        date1 = Format(DateTimePicker1.Value, "yyyy-MM-dd")
 
         days = Val(TextBox16.Text)
         outtank = Val(TextBox17.Text)
@@ -335,11 +334,11 @@ Public Class RentCar
         expectedtotal = Val(Label38.Text)
         refund = Val(TextBox24.Text)
 
-        startdate = DateTimePicker2.Value
-        enddate = DateTimePicker3.Value
+        startdate = Format(DateTimePicker2.Value, "yyyy-MM-dd")
+        enddate = Format(DateTimePicker3.Value, "yyyy-MM-dd")
 
         If TextBox1.Text = "" Then
-            query = "exec dbo .SP_ContractSave @branchcode = '" & branchcode & "' ,@date1= '" & date1 & "' ,@custcode = '" & custcode & "',@carcode= '" & carcode & "',@carlicpno= '" & carlicpno & "' ,@startdate = '" & startdate & "' ,@enddate = '" & enddate & "' ,@days= '" & days & "' ,@outtank = '" & outtank & "',@outkm = '" & outkm & "',@dayprice='" & dayprice & "',@extrakmprice ='" & extrakmprice & "',@notes='" & notes & "',@driver='" & driver & "',@drivercost = '" & drivercost & "',@expectedtotal = '" & expectedtotal & "',@refund = '" & refund & "'"
+            query = "exec sp_ContractSave @branchcode = '" & branchcode & "' ,@date1= '" & date1 & "' ,@custcode = '" & custcode & "',@carcode= '" & carcode & "',@carlicpno= '" & carlicpno & "' ,@startdate = '" & startdate & "' ,@enddate = '" & enddate & "' ,@days= '" & days & "' ,@outtank = '" & outtank & "',@outkm = '" & outkm & "',@dayprice='" & dayprice & "',@extrakmprice ='" & extrakmprice & "',@notes='" & notes & "',@driver='" & driver & "',@drivercost = '" & drivercost & "',@expectedtotal = '" & expectedtotal & "',@refund = '" & refund & "'"
         ElseIf TextBox1.Text <> "" Then
             contractcode = TextBox1.Text
             query = "update contracttbl set daysno='" & days & "',tankout='" & outtank & "',kmout='" & outkm & "',dayprice='" & dayprice & "',extrakmprice='" & extrakmprice & "',notes='" & notes & "',fromdate='" & startdate & "',todate='" & enddate & "',driver='" & driver & "',drivercost = '" & drivercost & "',expectedtotal = '" & expectedtotal & "', refund = '" & refund & "' where code = '" & contractcode & "'"
@@ -649,4 +648,6 @@ Public Class RentCar
         End If
 
     End Sub
+
+
 End Class

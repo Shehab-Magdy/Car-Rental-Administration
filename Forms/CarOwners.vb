@@ -83,7 +83,7 @@ Public Class CarOwners
         ownercode = TextBox5.Text
 
         If TextBox5.Text = "" Then
-            query = "exec SP_OwnerSave @nam = '" & nam & "',@addr='" & addr & "',@phon1='" & phon1 & "',@phon2='" & phon2 & "',@banktype='" & banktype & "',@bank='" & bank & "',@bankno='" & bankno & "'"
+            query = "exec sp_OwnerSave @nam = '" & nam & "',@addr='" & addr & "',@phon1='" & phon1 & "',@phon2='" & phon2 & "',@banktype='" & banktype & "',@bank='" & bank & "',@bankno='" & bankno & "'"
         End If
 
         If TextBox5.Text <> "" Then

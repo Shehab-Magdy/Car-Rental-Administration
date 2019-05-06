@@ -80,7 +80,7 @@ Public Class Employees
 
 
         If TextBox1.Text = "" Then
-            query = "exec SP_UserSave @nam = '" & nam & "',@phon='" & phon & "',@lognam='" & login & "',@logpass='" & pass1 & "',@job='" & job & "',@hasaccess='" & hasaccess & "',@isdriver='" & isdriver & "'"
+            query = "exec sp_UserSave @nam = '" & nam & "',@phon='" & phon & "',@lognam='" & login & "',@logpass='" & pass1 & "',@job='" & job & "',@hasaccess='" & hasaccess & "',@isdriver='" & isdriver & "'"
 
         ElseIf TextBox1.Text <> "" Then
             query = "update userstbl set empname = '" & nam & "',phone = '" & phon & "',logname = '" & login & "',logpass = '" & pass1 & "',empjob = '" & job & "',hasaccess  = '" & hasaccess & "',isdriver='" & isdriver & "' where code = '" & usercode & "'"

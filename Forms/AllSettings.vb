@@ -1,9 +1,11 @@
 ﻿Imports System.Data
 Imports System.Data.SqlClient
+Imports System.Configuration
 
 Public Class AllSettings
     Dim command As New SqlCommand
-    Sub new_Branch()
+
+    Public Sub New_Branch()
         TextBox6.Text = ""
         TextBox1.Text = ""
         TextBox2.Text = ""
@@ -135,21 +137,17 @@ Public Class AllSettings
         fax = TextBox4.Text
         ipadd = TextBox7.Text
 
-        Dim local As Integer
-        If CheckBox1.Checked = True Then
-            local = 1
-        Else
-            local = 0
-        End If
+        Dim local = If(CheckBox1.Checked = True, 1, 0)
 
-        If TextBox5.Text = "" Then
-            query = "exec SP_BranchSave @nam = '" & nam & "',@addr='" & addr & "',@pho1='" & pho1 & "',@pho2='" & pho2 & "',@fax='" & fax & "',@ipadd='" & ipadd & "',@loca='" & local & "',@res='" & res & "'"
+        Select Case TextBox5.Text
+            Case ""
+                query = "exec sp_BranchSave @nam = '" & nam & "',@addr='" & addr & "',@pho1='" & pho1 & "',@pho2='" & pho2 & "',@fax='" & fax & "',@ipadd='" & ipadd & "',@loca='" & local & "',@res='" & res & "'"
+            Case Is <> ""
+                query = "update branchestbl set name = '" & nam & "', address = '" & addr & "',phone1 = '" & pho1 & "',phone2 = '" & pho2 & "',faxno = '" & fax & "',ipaddress = '" & ipadd & "',curbranch  = '" & local & "',responsable='" & res & "' where code = '" & branchcode & "'"
+            Case Else
+                Exit Select
+        End Select
 
-        ElseIf TextBox5.Text <> "" Then
-            query = "update branchestbl set name = '" & nam & "', address = '" & addr & "',phone1 = '" & pho1 & "',phone2 = '" & pho2 & "',faxno = '" & fax & "',ipaddress = '" & ipadd & "',curbranch  = '" & local & "',responsable='" & res & "' where code = '" & branchcode & "'"
-
-        End If
-        
 
         Try
             If connection.State = ConnectionState.Closed Then
@@ -164,12 +162,12 @@ Public Class AllSettings
             connection.Close()
         End Try
 
-        new_Branch()
+        New_Branch()
 
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
-        new_Branch()
+        New_Branch()
 
     End Sub
 
@@ -192,5 +190,24 @@ Public Class AllSettings
     Private Sub Label25_Click(sender As Object, e As EventArgs) Handles Label25.Click
         pubcod = "160"
         Settings.Show()
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+        Try
+            If connection.State = ConnectionState.Closed Then
+                connection.Open()
+            End If
+#Disable Warning BC40000 ' Type or member is obsolete
+            command = New SqlCommand(cmdText:="exec sp_BackupDB @dir = '" & ConfigurationSettings.AppSettings.Get("BackupDir") & "', @dbname = '" & DbName & "'", connection:=connection)
+#Enable Warning BC40000 ' Type or member is obsolete
+            command.ExecuteNonQuery()
+            connection.Close()
+            MsgBox("Backup Completed Successfully")
+        Catch ex As Exception
+            MsgBox(ex.Message)
+            connection.Close()
+        End Try
+
     End Sub
 End Class

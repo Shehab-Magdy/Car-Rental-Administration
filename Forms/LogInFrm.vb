@@ -40,6 +40,17 @@ Public Class LogInFrm
 
 
     Private Sub LogInFrm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ''Set timer and test
+        'Dim var As Integer = DateGood(365)
+        'Dim str As String = "The Program is outofdate! Please contact vendor for updates. and report this code " & var
 
+        'If var = 3 Then
+        '    Me.Show() 'Show if good
+        'Else
+        '    MsgBox(str, vbExclamation, "Update needed")
+        '    Me.Close() 'Hide if not
+        'End If
+
+        Label3.Text = "Version Date. " & CallBuildingInfo()
     End Sub
 End Class

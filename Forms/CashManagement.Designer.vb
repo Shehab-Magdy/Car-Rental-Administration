@@ -58,6 +58,8 @@ Partial Class CashManagement
         Me.Button11 = New System.Windows.Forms.Button()
         Me.ComboBox5 = New System.Windows.Forms.ComboBox()
         Me.Label11 = New System.Windows.Forms.Label()
+        Me.ComboBox6 = New System.Windows.Forms.ComboBox()
+        Me.Label12 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -66,7 +68,7 @@ Partial Class CashManagement
         Me.RadioButton1.AutoSize = True
         Me.RadioButton1.Checked = True
         Me.RadioButton1.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.RadioButton1.Location = New System.Drawing.Point(47, 38)
+        Me.RadioButton1.Location = New System.Drawing.Point(53, 12)
         Me.RadioButton1.Name = "RadioButton1"
         Me.RadioButton1.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.RadioButton1.Size = New System.Drawing.Size(98, 18)
@@ -80,7 +82,7 @@ Partial Class CashManagement
         '
         Me.RadioButton2.AutoSize = True
         Me.RadioButton2.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.RadioButton2.Location = New System.Drawing.Point(180, 38)
+        Me.RadioButton2.Location = New System.Drawing.Point(187, 12)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.RadioButton2.Size = New System.Drawing.Size(88, 18)
@@ -114,7 +116,7 @@ Partial Class CashManagement
         Me.ComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.ComboBox1.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(89, 64)
+        Me.ComboBox1.Location = New System.Drawing.Point(89, 38)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(200, 22)
         Me.ComboBox1.TabIndex = 3
@@ -122,7 +124,7 @@ Partial Class CashManagement
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(36, 68)
+        Me.Label5.Location = New System.Drawing.Point(36, 42)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(36, 14)
         Me.Label5.TabIndex = 18
@@ -131,7 +133,7 @@ Partial Class CashManagement
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(33, 100)
+        Me.Label2.Location = New System.Drawing.Point(33, 74)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(39, 14)
         Me.Label2.TabIndex = 18
@@ -142,7 +144,7 @@ Partial Class CashManagement
         Me.ComboBox2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.ComboBox2.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.ComboBox2.FormattingEnabled = True
-        Me.ComboBox2.Location = New System.Drawing.Point(89, 96)
+        Me.ComboBox2.Location = New System.Drawing.Point(89, 70)
         Me.ComboBox2.Name = "ComboBox2"
         Me.ComboBox2.Size = New System.Drawing.Size(200, 22)
         Me.ComboBox2.TabIndex = 4
@@ -150,7 +152,7 @@ Partial Class CashManagement
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(11, 132)
+        Me.Label3.Location = New System.Drawing.Point(11, 106)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(60, 14)
         Me.Label3.TabIndex = 18
@@ -161,7 +163,7 @@ Partial Class CashManagement
         Me.ComboBox3.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.ComboBox3.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.ComboBox3.FormattingEnabled = True
-        Me.ComboBox3.Location = New System.Drawing.Point(89, 128)
+        Me.ComboBox3.Location = New System.Drawing.Point(89, 102)
         Me.ComboBox3.Name = "ComboBox3"
         Me.ComboBox3.Size = New System.Drawing.Size(200, 22)
         Me.ComboBox3.TabIndex = 5
@@ -186,7 +188,7 @@ Partial Class CashManagement
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.CustomFormat = "dd -MMMM- yyyy"
+        Me.DateTimePicker1.CustomFormat = "yyyy-MM-dd"
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DateTimePicker1.Location = New System.Drawing.Point(372, 128)
         Me.DateTimePicker1.Name = "DateTimePicker1"
@@ -266,7 +268,7 @@ Partial Class CashManagement
         '
         'DateTimePicker2
         '
-        Me.DateTimePicker2.CustomFormat = "dd -MMMM- yyyy"
+        Me.DateTimePicker2.CustomFormat = "yyyy-MM-dd"
         Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DateTimePicker2.Location = New System.Drawing.Point(223, 72)
         Me.DateTimePicker2.Name = "DateTimePicker2"
@@ -406,11 +408,32 @@ Partial Class CashManagement
         Me.Label11.TabIndex = 45
         Me.Label11.Text = "الخزينة"
         '
-        'Frm7
+        'ComboBox6
+        '
+        Me.ComboBox6.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
+        Me.ComboBox6.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
+        Me.ComboBox6.FormattingEnabled = True
+        Me.ComboBox6.Location = New System.Drawing.Point(89, 129)
+        Me.ComboBox6.Name = "ComboBox6"
+        Me.ComboBox6.Size = New System.Drawing.Size(200, 22)
+        Me.ComboBox6.TabIndex = 46
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Location = New System.Drawing.Point(11, 132)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(77, 14)
+        Me.Label12.TabIndex = 47
+        Me.Label12.Text = "رقم السيارة"
+        '
+        'CashManagement
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(590, 406)
+        Me.Controls.Add(Me.Label12)
+        Me.Controls.Add(Me.ComboBox6)
         Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.ComboBox5)
         Me.Controls.Add(Me.Button11)
@@ -440,7 +463,7 @@ Partial Class CashManagement
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.KeyPreview = True
         Me.MaximizeBox = False
-        Me.Name = "Frm7"
+        Me.Name = "CashManagement"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.RightToLeftLayout = True
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -485,4 +508,6 @@ Partial Class CashManagement
     Friend WithEvents Button11 As System.Windows.Forms.Button
     Friend WithEvents ComboBox5 As System.Windows.Forms.ComboBox
     Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox6 As ComboBox
+    Friend WithEvents Label12 As Label
 End Class

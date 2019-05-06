@@ -379,7 +379,7 @@ Partial Class RetrieveCar
         '
         'DateTimePicker2
         '
-        Me.DateTimePicker2.CustomFormat = "dd-MM-yyyy  HH:mm"
+        Me.DateTimePicker2.CustomFormat = "yyyy-MM-dd"
         Me.DateTimePicker2.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
         Me.DateTimePicker2.Enabled = False
         Me.DateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Custom
@@ -392,7 +392,7 @@ Partial Class RetrieveCar
         '
         'DateTimePicker1
         '
-        Me.DateTimePicker1.CustomFormat = "dd-MM-yyyy  HH:mm"
+        Me.DateTimePicker1.CustomFormat = "yyyy-MM-dd"
         Me.DateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right
         Me.DateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.DateTimePicker1.Location = New System.Drawing.Point(121, 134)
@@ -987,7 +987,7 @@ Partial Class RetrieveCar
         Me.Button15.Text = "جديد"
         Me.Button15.UseVisualStyleBackColor = True
         '
-        'Frm6
+        'RetrieveCar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(7.0!, 14.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
@@ -1075,7 +1075,7 @@ Partial Class RetrieveCar
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.KeyPreview = True
         Me.MaximizeBox = False
-        Me.Name = "Frm6"
+        Me.Name = "RetrieveCar"
         Me.RightToLeft = System.Windows.Forms.RightToLeft.Yes
         Me.RightToLeftLayout = True
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen

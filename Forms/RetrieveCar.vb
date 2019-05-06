@@ -8,6 +8,7 @@ Public Class RetrieveCar
     Dim command As New SqlCommand
     Dim custcode As String
     Dim expectedtotal As Decimal
+    Dim daykm As Integer = 0
 
     Sub calc_total()
         tot_befor_tax = Val(TextBox20.Text)
@@ -17,6 +18,14 @@ Public Class RetrieveCar
 
         Label25.Text = tot_after_tax + Val(Label36.Text)
     End Sub
+    Public Function CalcExtraKM()
+        Dim days As Integer = 0, currentkm As Integer = 0, firstkm As Integer = 0, extrakm As Integer = 0
+        days = TextBox9.Text
+        currentkm = TextBox7.Text
+        firstkm = TextBox6.Text
+        extrakm = (currentkm - firstkm) - (days * daykm)
+        Return extrakm
+    End Function
 
     Sub new_close()
         Label25.Text = ""
@@ -94,6 +103,7 @@ Public Class RetrieveCar
                 TextBox23.Text = dtcontractv.Rows(0).Item("extrakmprice").ToString
                 DateTimePicker2.Value = dtcontractv.Rows(0).Item("startdate").ToString
                 expectedtotal = dtcontractv.Rows(0).Item("expectedtotal")
+                daykm = dtcontractv.Rows(0).Item("daykm")
 
                 query2 = "select balance from customerstbl where code = '" & custcode & "'"
                 Try
@@ -126,9 +136,9 @@ Public Class RetrieveCar
             TextBox8.Text = Val(TextBox7.Text) - Val(TextBox6.Text)
             TextBox7.BackColor = Color.White
         Else
-                'MsgBox("لقد ادخلت قيمة كيلو مترات غير صحيحة")
-                TextBox7.Focus()
-                TextBox7.BackColor = Color.Red
+            'MsgBox("لقد ادخلت قيمة كيلو مترات غير صحيحة")
+            TextBox7.Focus()
+            TextBox7.BackColor = Color.Red
         End If
         TextBox12.Text = Val(TextBox11.Text) - Val(TextBox10.Text)
         TextBox9.Text = DateDiff(DateInterval.Day, DateTimePicker2.Value, DateTimePicker1.Value)
@@ -200,7 +210,7 @@ Public Class RetrieveCar
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-        
+
         query = "update contracttbl set kmreceived= '" & kmreceived & "', tankreceived= '" & tankreceived & "', kmusage= '" & kmusage & "', tankusage= '" & tankusage & "', kmextra= '" & kmextra & "', value= '" & value & "', tankcost= '" & tankcost & "', damagecost= '" & damagecost & "', extracost= '" & extracost & "', disc= '" & disc & "', tax= '" & tax & "', taxp= '" & taxper & "', totalvalue= '" & totalvalue & "', closedby= '" & usercod & "', closeddate = '" & Now & "', contractstatus = 1 where code = '" & contractcode & "'"
 
         Try
@@ -503,6 +513,7 @@ Public Class RetrieveCar
 
     End Sub
 
+
     Private Sub Button11_Click(sender As Object, e As EventArgs) Handles Button11.Click
         CarCompareFrm.Show()
         CarCompareFrm.PBox2.Image = Me.PBox44.Image
@@ -534,5 +545,7 @@ Public Class RetrieveCar
         calc_total()
     End Sub
 
- 
+    Private Sub TextBox13_GotFocus(sender As Object, e As EventArgs) Handles TextBox13.GotFocus
+        TextBox13.Text = If(CalcExtraKM() <= 0, 0, CalcExtraKM())
+    End Sub
 End Class

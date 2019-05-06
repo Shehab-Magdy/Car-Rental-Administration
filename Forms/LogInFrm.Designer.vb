@@ -30,6 +30,7 @@ Partial Class LogInFrm
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -98,6 +99,18 @@ Partial Class LogInFrm
         Me.PictureBox1.TabIndex = 6
         Me.PictureBox1.TabStop = False
         '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Tahoma", 7.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.ForeColor = System.Drawing.SystemColors.AppWorkspace
+        Me.Label3.Location = New System.Drawing.Point(397, 148)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(39, 12)
+        Me.Label3.TabIndex = 7
+        Me.Label3.Text = "Label3"
+        '
         'LogInFrm
         '
         Me.AcceptButton = Me.Button1
@@ -106,6 +119,7 @@ Partial Class LogInFrm
         Me.BackColor = System.Drawing.Color.AntiqueWhite
         Me.CancelButton = Me.Button2
         Me.ClientSize = New System.Drawing.Size(635, 222)
+        Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
@@ -136,4 +150,5 @@ Partial Class LogInFrm
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents Label3 As Label
 End Class
